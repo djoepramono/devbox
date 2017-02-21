@@ -1,0 +1,10 @@
+// `cmd+shift+p` + `user settings`
+{
+    "window.zoomLevel": 1,
+    "workbench.statusBar.visible": false,
+    "editor.renderIndentGuides": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false, // This removes the annoying default auto detect
+    "editor.hideCursorInOverviewRuler": true
+}
