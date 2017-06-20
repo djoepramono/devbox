@@ -1,10 +1,16 @@
 // `cmd+shift+p` + `user settings`
 {
-    "window.zoomLevel": 1,
-    "workbench.statusBar.visible": false,
-    "editor.renderIndentGuides": true,
+    "window.zoomLevel": 0,
+    "workbench.statusBar.visible": true,
     "files.trimTrailingWhitespace": true,
     "editor.tabSize": 2,
-    "editor.insertSpaces": false, // This removes the annoying default auto detect
-    "editor.hideCursorInOverviewRuler": true
+
+    // detectIndentation true overrides insertSpaces
+    "editor.detectIndentation": false,
+    "editor.insertSpaces": true,
+
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.renderIndentGuides": true,
+    "editor.renderLineHighlight": "none"
 }
