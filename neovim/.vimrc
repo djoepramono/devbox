@@ -23,12 +23,15 @@ Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 
 " Plugin outside ~/.vim/plugged with post-update hook
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Assuming you already installed FZF via brew, otherwise it might be on diff
+" path
+Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
 
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
 
 " Custom
+Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
 
 " Initialize plugin system
@@ -61,10 +64,14 @@ set history=1000 " Remeber more commands!
 set autochdir
 set ttyfast
 set noerrorbells
-"  set relativenumber "Disable this, annoying
+set relativenumber " Useful but needs time to get used to
 set tabstop=2
 set shiftwidth=2
 
 set softtabstop=2
 set expandtab
 set autoindent
+
+" map
+map f :FZF
+
