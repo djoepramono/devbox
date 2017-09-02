@@ -74,4 +74,12 @@ set autoindent
 
 " map
 map f :FZF
-
+map <C-t>a :tabs<cr>
+map <C-t><Right> :tabe<cr>
+map <C-t><Left> :tabp<cr>
+"
+"
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
