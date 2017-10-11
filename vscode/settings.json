@@ -3,6 +3,7 @@
     "window.zoomLevel": 0,
     "workbench.statusBar.visible": true,
     "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
     "editor.tabSize": 2,
 
     // detectIndentation true overrides insertSpaces
@@ -12,5 +13,8 @@
     "editor.hideCursorInOverviewRuler": true,
     "editor.renderWhitespace": "boundary",
     "editor.renderIndentGuides": true,
-    "editor.renderLineHighlight": "none"
+    "editor.renderLineHighlight": "none",
+    "editor.wordWrap": "on",
+
+    "explorer.openEditors.visible": 0
 }
