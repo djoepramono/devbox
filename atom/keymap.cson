@@ -1,0 +1,7 @@
+'.platform-darwin':
+  'cmd-0': 'tree-view:toggle-focus'
+
+'body':
+  'ctrl-1': 'pane:show-item-1'
+  'ctrl-2': 'pane:show-item-2'
+  'ctrl-3': 'pane:show-item-3'

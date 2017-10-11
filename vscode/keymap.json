@@ -1,18 +1,29 @@
 // Place your key bindings in this file to overwrite the defaults
 // Default command to bring this up: `cmd+shift+p` + `shortcut`
 [
-    // This is there by default but got overwritten
-    { "key": "cmd+=",                "command": "workbench.action.zoomIn" },
-    { "key": "cmd+-",                "command": "workbench.action.zoomOut" },
-    { "key": "cmd+0",                "command": "workbench.action.zoomReset" },
-
-    // Foldings
-    { "key": "alt+cmd+[",            "command": "editor.fold",
-                                        "when": "editorTextFocus" },
-    { "key": "alt+cmd+]",            "command": "editor.unfold",
-                                        "when": "editorTextFocus" },
-
-    // Display
-    { "key": "ctrl+`",               "command": "workbench.action.terminal.toggleTerminal" },
-    { "key": "cmd+`",                "command": "workbench.action.toggleSidebarVisibility" }
+    {
+      "key": "shift+enter",
+      "command": "extension.jumpy-word",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "cmd+k right",
+      "command": "workbench.action.splitEditor"
+    },
+    {
+      "key": "cmd+\\",
+      "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+      "key": "cmd+b",
+      "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+      "key": "cmd+k cmd+n",
+      "command": "explorer.newFile"
+    },
+    {
+      "key": "alt+`",
+      "command": "workbench.action.terminal.focus"
+    }
 ]
