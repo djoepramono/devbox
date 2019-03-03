@@ -1,0 +1,3 @@
+#SUBSYSTEM=="drm", ACTION=="change", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/joe/.Xauthority", RUN+="/usr/bin/arandr"
+#SUBSYSTEM=="drm", ACTION=="change", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/joe/.Xauthority", RUN+="/usr/bin/xrandr --auto" 
+SUBSYSTEM=="drm", ACTION=="change", ENV{DISPLAY}=":0", ENV{XAUTHORITY}="/home/joe/.Xauthority", RUN+="/usr/bin/xrandr-custom-detect" 
