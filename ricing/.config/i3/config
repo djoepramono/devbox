@@ -173,15 +173,25 @@ bar {
 
 # Custom
 # Background
-exec --no-startup-id feh --bg-scale ~/.config/i3/blue-night-desktop.png
+#exec --no-startup-id feh --bg-scale ~/.config/i3/blue-night-desktop.png
+exec --no-startup-id feh --bg-scale ~/.config/i3/purple-skylight-8bit-wallpaper.jpg
 
 # To enable transparency, you need compton.conf
 exec compton
 
+# Enable Polybar at the top, also change the settings
+# exec_always --no-startup-id ~/.config/polybar/launch.sh
+#exec_always --no-startup-id polybar example
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+
 # Set the gap between window, looks nicer IMHO
 gaps inner 10
-gaps outer 12
+#gaps outer 12
 
 # Lock screen shortcut, lockscreen is a bash alias
 bindsym $mod+l exec gnome-screensaver-command -a 
-
+bindsym $mod+backslash move workspace to output left
+#bindsym $mod+Alt+l move workspace to output right
+bindsym $mod+Shift+Print exec gnome-screenshot -a
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
