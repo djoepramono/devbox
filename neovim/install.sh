@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Installing Neovim via Homebrew
-brew install neovim/neovim/neovim
+# brew install neovim/neovim/neovim
 
 # Download Plug Vim
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
