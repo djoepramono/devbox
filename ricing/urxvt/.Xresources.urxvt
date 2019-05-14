@@ -1,0 +1,49 @@
+! special
+URxvt.foreground:   #b4d5d3
+URxvt.background: #232831
+URxvt.cursorColor:  #b4d5d3
+
+! black
+*.color0:       #111716
+*.color8:       #71d763
+
+! red
+*.color1:       #bb723d
+*.color9:       #b69b59
+
+! green
+!*.color2:       #283131
+*.color2:       #d7f2a1
+*.color10:      #89d0cb
+
+! yellow
+*.color3:       #3d4a49
+*.color11:      #5aa3e7
+
+! blue
+*.color4:       #576967
+*.color12:      #57b1ac
+
+! magenta
+*.color5:       #778e8c
+*.color13:      #ceb683
+
+! cyan
+*.color6:       #9bb9b6
+*.color14:      #6fc4be
+
+! white
+*.color7:       #c5eae7
+*.color15:      #6e96c5
+
+URxvt*scrollBar: false
+URxvt.font:     xft:Ubuntu Mono:pixelsize=14,style=regular:antialias=true
+URxvt.boldFont: xft:Ubuntu Mono:pixelsize=14,style=bold:antialias=true
+URxvt*letterSpace: -1
+URxvt.internalBorder: 10 
+
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.keysym.Control-equal  : font-size:increase
+URxvt.keysym.Control-minus  : font-size:decrease
+URxvt.keysym.C-0: font-size:reset 
