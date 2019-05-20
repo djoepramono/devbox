@@ -33,6 +33,9 @@ Plug '~/my-prototype-plugin'
 " Custom
 Plug 'vim-airline/vim-airline'
 Plug 'morhetz/gruvbox'
+Plug 'nanotech/jellybeans.vim'
+Plug 'lifepillar/vim-solarized8'
+Plug 'ayu-theme/ayu-vim'
 
 " Initialize plugin system
 call plug#end()
@@ -42,7 +45,14 @@ call plug#end()
 if (has("termguicolors"))
  set termguicolors
 endif
-colorscheme gruvbox
+set termguicolors
+set t_Co=256
+" colorscheme gruvbox
+" colorscheme jellybeans
+" colorscheme solarized8
+let ayucolor="mirage"
+colorscheme ayu
+
 set background=dark    " Setting dark mode
 
 " From Vodurden git
