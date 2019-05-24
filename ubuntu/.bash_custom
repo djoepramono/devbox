@@ -1,0 +1,101 @@
+#!/bin/bash
+
+# Source this file either in .bashrc or .bash_profile (based on your terminal)
+
+# need this
+#function scm_prompt_info()
+#{
+#  scm;
+#  scm_prompt_char;
+#  scm_prompt_info_common;
+#}
+
+# prompt
+#if [ -z ${AWS_ROLE+x} ]; then CUSTOM_PROMPT="$AWS_ROLE"; else CUSTOM_PROMPT="\u"; fi
+
+# this this is false or true
+[ -z $AWS_ROLE_ARN ] && CUSTOM_PROMPT="\u" || CUSTOM_PROMPT="$AWS_ROLE_ARN ($AWS_REGION)"
+
+# PS1="\n${cyan}$(echo $CUSTOM_PROMPT): ${reset_color} ${yellow}\w ${green}$(scm_prompt_info) \n${reset_color}→ "
+PS1="\n${cyan}$(echo $CUSTOM_PROMPT): ${reset_color} ${yellow}\w ${green}$(__git_ps1) \n${reset_color}→ "
+if [ -f ${HOME}/.bash.d/git-prompt.sh ]; then
+  source ${HOME}/.bash.d/git-prompt.sh
+fi
+
+#PS1="${cyan}[\u@\h$([[ -n $AWS_ROLE ]] && echo  $AWS_ROLE) \W$(__git_ps1  (%s))]\$ "
+
+# sbt needs this
+export TERM=xterm-color
+
+# bash-my-aws
+for f in ~/.bash-my-aws/lib/*-functions; do source $f; done
+
+source ~/.bash-my-aws/bash_completion.sh
+
+# fix atom dark background bug, caused by chromium
+alias atom="atom --enable-gpu-rasterization"
+alias dnuke='docker kill $(docker ps -q);docker rm $(docker ps -a -q);docker rmi -f $(docker images -q -f dangling=true);docker rmi -f $(docker images -q);docker volume rm -f $(docker volume ls -q)'
+
+# update ubuntu
+alias update-ubuntu='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean'
+alias lockscreen="gnome-screensaver-command -a"   
+
+# custom function
+function git-web ()
+{
+  if [ -z $1 ]; then
+    echo "Remote name needed! Usage: git-web [origin]"
+    return -1
+  fi
+
+  if [ -z $(git remote get-url $1) ]; then
+    echo "Cannot find remote $1, available remotes are:"
+    git remote -v
+
+    return -1
+  fi
+
+  xdg-open "https://$( git remote get-url $1 | awk -F '@' '{print $2}' | sed -e s/:/\\// | sed '/^\s*$/d' | awk -F '.git' '{print $1}')"
+}
+
+function aws-console {
+  if [ -z ${AWS_ROLE} ]; then
+    echo "No AWS_ROLE found. Are you authenticated?"
+    return
+  fi
+
+  USER_DATA_DIR=/tmp/chrome-profile-$AWS_ROLE
+  mkdir -p "${USER_DATA_DIR}"
+#  /snap/bin/chromium --new --args --profile-directory="${USER_DATA_DIR}" --incognito $(aws-console-url)
+  xdg-open $(aws-console-url)
+}
+
+# Check S3 total objects and the size given an s3 Prefix
+# e.g. aws3du s3://my-bucket/my-prefix
+function aws3du(){
+  bucket=`cut -d/ -f3 <<< $1`
+  prefix=`awk -F/ '{for (i=4; i<NF; i++) printf $i"/"; print $NF}' <<< $1`
+  aws s3api \
+    list-objects \
+    --bucket $bucket \
+    --prefix=$prefix \
+    --output text \
+    --query '[sum(Contents[].Size), length(Contents[])]' \
+    | while read -r size num_objects; do
+      jq '. |{ size:.[0],num_objects: .[1]}' <<< "[\"$(numfmt --to=si ${size})\",${num_objects}]"
+     done
+}
+
+
+# show color
+#function show-colors() {
+#  colors=( $( sed -re '/^!/d; /^$/d; /^#/d; s/(\*color)([0-9]):/\10\2:/g;' $xdef | grep 'color[01][0-9]:' | sort | sed  's/^.*: *//g' ) )
+
+#echo -e "\e[1;37m 
+# Black    Red      Green    Yellow   Blue     Magenta   Cyan    White   
+#──────────────────────────────────────────────────────────────────────\e[0m"
+#for i in {0..7}; do echo -en "\e[$((30+$i))m ${colors[i]} \e[0m"; done
+#echo
+#for i in {8..15}; do echo -en "\e[1;$((22+$i))m ${colors[i]} \e[0m"; done
+#echo -e "\n"
+#}
