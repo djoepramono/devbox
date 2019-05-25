@@ -1,11 +1,17 @@
 # Config location
-`~/.config/bspwm`
-
-# Key maps
+The main config is actually just a shell script located in `~/.config/bspwm`
 
 It uses external program called `sxhksd`, which is saved in `~/.config/sxhkd`
 
 The config file are very sensitive, make sure you don't put a comment in between shorcut and the actual command
+
+# Requirements
+
+This WM is configured to work with
+- lemonbar
+- compton
+
+So it's better to have them installed
 
 # Splitting window
 
