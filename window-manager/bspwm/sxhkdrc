@@ -3,11 +3,12 @@
 #
 
 # terminal emulator
+# change this with your favourite terminal: urxvt, alacritty
 super + Return
   termite	
 
 # program launcher
-super + @space
+super + space
 	dmenu_run
 
 # make sxhkd reload its configuration files:

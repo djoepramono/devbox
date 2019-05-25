@@ -2,8 +2,10 @@
 `~/.config/bspwm`
 
 # Key maps
-it uses external program called `sxhksd`, which is saved in `~/.config/sxhkd`
 
+It uses external program called `sxhksd`, which is saved in `~/.config/sxhkd`
+
+The config file are very sensitive, make sure you don't put a comment in between shorcut and the actual command
 
 # Gnome Display Manager
 
