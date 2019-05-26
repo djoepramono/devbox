@@ -17,10 +17,27 @@
 [ -z $AWS_ROLE_ARN ] && CUSTOM_PROMPT="\u" || CUSTOM_PROMPT="$AWS_ROLE_ARN ($AWS_REGION)"
 
 # PS1="\n${cyan}$(echo $CUSTOM_PROMPT): ${reset_color} ${yellow}\w ${green}$(scm_prompt_info) \n${reset_color}→ "
-PS1="\n${cyan}$(echo $CUSTOM_PROMPT): ${reset_color} ${yellow}\w ${green}$(__git_ps1) \n${reset_color}→ "
+
+# Hint
+# color scheme starts with \e[ or \033[ 
+# color scheme is ; delimited and it's in this format background;font-decoration;text-color. If you want default just put nothing
+# color scheme ends with m
+# to reset a color scheme you can put nothing between \033[ and m
+# to reset_color or any color scheme that has length 0, you need to enclose everything with [ and ] 
+#   otherwise bash sometimes cannot get the length of the prompt right and 
+#   as a result pressing up arrow to brose the history might leak previous command
+# remember you need to escape \ and the enclosing []
+bold_cyan="\\033[;01;36m"
+yellow="\\033[;00;31m"
+blue="\\033[;00;34m"
+white="\\033[;00;37m"
+reset_color="\[\\033[m\]"
+PS1="\n${white}$(echo $CUSTOM_PROMPT): ${reset_color} ${bold_cyan}\w ${yellow}$(__git_ps1) \n${reset_color}→ "
 if [ -f ${HOME}/.bash.d/git-prompt.sh ]; then
   source ${HOME}/.bash.d/git-prompt.sh
 fi
+
+echo "${red} hey ${green} hoy"
 
 #PS1="${cyan}[\u@\h$([[ -n $AWS_ROLE ]] && echo  $AWS_ROLE) \W$(__git_ps1  (%s))]\$ "
 
@@ -28,9 +45,10 @@ fi
 export TERM=xterm-color
 
 # bash-my-aws
-for f in ~/.bash-my-aws/lib/*-functions; do source $f; done
+BASH_MY_AWS_FOLDER="$HOME/Programs/bash-my-aws"
+for f in ${BASH_MY_AWS_FOLDER}/lib/*-functions; do source $f; done
 
-source ~/.bash-my-aws/bash_completion.sh
+source $BASH_MY_AWS_FOLDER/bash_completion.sh
 
 # fix atom dark background bug, caused by chromium
 alias atom="atom --enable-gpu-rasterization"
