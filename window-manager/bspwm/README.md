@@ -7,7 +7,7 @@ The config file are very sensitive, make sure you don't put a comment in between
 
 # Requirements
 
-This WM is configured to work with
+I configured this WM to work with
 - lemonbar
 - compton
 
@@ -24,6 +24,22 @@ If you want to have control on the splitting direction, use `--presel-dir` or by
 You probably are using a display manager like lightdm or gdm (from Gnome). 
 
 If you use GDM3, you need to create the `bspwm.desktop` on `/usr/share/xsessions`. This file normally comes with bspwm installation, but just in case you can also use the one provided
+
+# Top Bar
+
+I'm using lemonbar and while it's actually straight forward to use Lemonbar by default, it's not as straightforward to use it with bspwm
+
+There are examples on the bspwm repo and basically there are 4 main files
+- panel: this is the entry point
+- panel_bar: this file was probably meant to be executable on the global level, I change the reference to this file using relative path instead
+- panel_colors:  this file was probably meant to be executable on the global level, I change the reference to this file using relative path instead
+- profile: this file was probably meant to be appended to `/etc/profile`, but for simplicity I just move the content to `panel`
+
+To run the lemonbar you can include this in bspwmrc
+
+```
+./panel
+```
 
 # Reference
 
