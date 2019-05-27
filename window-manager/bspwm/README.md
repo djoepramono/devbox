@@ -32,7 +32,7 @@ I'm using lemonbar and while it's actually straight forward to use Lemonbar by d
 There are examples on the bspwm repo and basically there are 4 main files
 - panel: this is the entry point
 - panel_bar: this file was probably meant to be executable on the global level, I change the reference to this file using relative path instead
-- panel_colors:  this file was probably meant to be executable on the global level, I change the reference to this file using relative path instead
+- panel_colors:  this file was meant to be sourced in another script e.g. panel_bar, I change the reference to this file using relative path instead
 - profile: this file was probably meant to be appended to `/etc/profile`, but for simplicity I just move the content to `panel`
 
 To run the lemonbar you can include this in bspwmrc
@@ -40,6 +40,8 @@ To run the lemonbar you can include this in bspwmrc
 ```
 ./panel
 ```
+
+Except that sometimes it doesn't run on startup. It will run if you call manually from the command line. Currently it's not known why
 
 # Reference
 
