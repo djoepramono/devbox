@@ -1,6 +1,6 @@
 #! /bin/sh
 
-sxhkd &
+pkill sxhkd; sxhkd &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
@@ -17,4 +17,22 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
-$HOME/.config/polybar/launch.sh
+# Background
+feh --bg-scale ~/Pictures/mountain-road.jpg
+
+# Compositor - window effect
+pkill compton; compton --config ~/.config/compton/compton.conf &
+
+# Notification
+pkill dunst; dunst &
+
+# Top Bar
+# This has been inconsistent, sometimes it simply doesn't work
+# To debug use the exec variant
+#   exec ${HOME}/.config/bspwm/lemonbar/lemonbar-wrapper.sh >> /tmp/lemonbar.out
+${HOME}/.config/bspwm/lemonbar/panel
+# Alternatively use polybar instead
+#   $HOME/.config/polybar/launch.sh
+
+# To debug, spawn a terminal of you choice 
+#   alacritty

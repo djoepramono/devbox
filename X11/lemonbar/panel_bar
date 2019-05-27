@@ -2,9 +2,7 @@
 #
 # Example panel for lemonbar
 
-# debug
-# echo "$PWD"
-source ./panel_colors
+source $HOME/.config/bspwm/lemonbar/panel_colors
 
 num_mon=$(bspc query -M | wc -l)
 
