@@ -25,7 +25,9 @@ Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 " Plugin outside ~/.vim/plugged with post-update hook
 " Assuming you already installed FZF via brew, otherwise it might be on diff
 " path
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+" Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim' 
 
 " Unmanaged plugin (manually installed and updated)
 Plug '~/my-prototype-plugin'
@@ -83,13 +85,23 @@ set expandtab
 set autoindent
 
 " map
+" note that you might need the space after the key shortcut
 map f :FZF
 map <C-t>a :tabs<cr>
 map <C-t><Right> :tabe<cr>
 map <C-t><Left> :tabp<cr>
+nnoremap <C-b> :NERDTreeToggle<cr>
+nnoremap <C-0> :NERDTreeFocus<cr>
 "
 "
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
+
+"ProjectFiles instead of :Files or :GitFiles
+function! s:find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
+command! ProjectFiles execute 'Files' s:find_git_root()
