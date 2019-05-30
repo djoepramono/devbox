@@ -65,7 +65,6 @@ set showmatch
 set diffopt=filler,iwhite "Ignore all whitespace
 set showmatch " Show matching braces
 set encoding=utf-8 "The one true encoding
-set clipboard+=unnamed " Yanks go to cliboard
 set title " Inherit vim's title, not the terminals
 set hidden " Allows multiple buffer managing
 set backspace=indent,eol,start " Lazy backspace
@@ -83,6 +82,13 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set autoindent
+
+" copying
+set mouse=a " copying with mouse, does not copy the line numbers
+" unnamedplus = yanks go to shared clipboard. 
+" unnamed = yanks got to vim primary clipboard which is not shared
+" for mac and windows, there's only one clipboard. So setting to unnamed is enough
+set clipboard+=unnamedplus 
 
 " map
 " note that you might need the space after the key shortcut
