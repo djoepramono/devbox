@@ -95,7 +95,7 @@ font:
     #   - (Linux) monospace
     #   - (Windows) Consolas
     # family: monospace
-    family: Iosevka Term
+    family: Inconsolata
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -161,7 +161,9 @@ render_timer: false
 persistent_logging: false
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: true
+# Somehow alacritty cannot make the text thicker, just different color
+# draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night Bright)
 #colors:
@@ -245,31 +247,31 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x232831'
-    foreground: '0xb4d5d3'
+    background: '0xebeff6'
+    foreground: '0x223355'
 
   # Normal colors
   normal:
-    black:   '0x111716'
-    red:     '0xbb723d'
-    green:   '0xd7f2a1'
-    yellow:  '0x3d4a49'
-    blue:    '0x576967'
-    magenta: '0x778e8c'
-    cyan:    '0x9bb9b6'
-    white:   '0xc5eae7'
+    black:   '0x223355'
+    red:     '0xb53f78'
+    green:   '0x308a2e'
+    yellow:  '0xa5a450'
+    blue:    '0x3a5a9e'
+    magenta: '0x835698'
+    cyan:    '0x318196'
+    white:   '0x7399c8'
 
   # Bright colors
   bright:
     black:   '0x71d763'
     red:     '0xb69b59'
-    green:   '0x89d0cb'
+    green:   '0x218367'
     yellow:  '0x5aa3e7'
-    blue:    '0x57b1ac'
+    blue:    '0x204289'
     magenta: '0xceb683'
     cyan:    '0x6fc4be'
-    white:   '0x6e96c5'
-  
+    white:   '0x090c0f'
+
   indexed_colors: []
 
 # Visual Bell
@@ -302,7 +304,8 @@ visual_bell:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.8
+# This might conflict with compton, better to set to 1.0
+background_opacity: 1.0
 
 # Mouse bindings
 #
