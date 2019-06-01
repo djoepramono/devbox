@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# fix atom dark background bug, caused by chromium
+alias atom="atom --enable-gpu-rasterization"
+
+# clean up docker files
+alias dnuke='docker kill $(docker ps -q);docker rm $(docker ps -a -q);docker rmi -f $(docker images -q -f dangling=true);docker rmi -f $(docker images -q);docker volume rm -f $(docker volume ls -q)'
+
+# update ubuntu
+alias update-ubuntu='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean'
+
+# lockscreen
+alias lockscreen="gnome-screensaver-command -a"   
+
+# add trailing slash on directory
+alias ls='ls -p --color=auto' 
