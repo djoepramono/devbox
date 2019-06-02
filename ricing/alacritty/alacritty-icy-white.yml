@@ -1,3 +1,32 @@
+# This is just a partial configuration
+# It will use the default value when not configured
+# The complete configuration can be found in Alacritty github
+
+window:
+  padding:
+    x: 12 
+    y: 12
+
+tabspaces: 2 
+
+# Require restart
+font:
+  normal:
+    family: UbuntuMono
+    style: Regular
+  bold:
+    style: Bold
+  italic:
+    style: Italic
+  size: 10.0
+  offset:
+    x: -1
+    y: 1
+  # Set to true for MacOS retina display
+  use_thin_strokes: false 
+
+draw_bold_text_with_bright_colors: false
+
 colors:
   # Default colors
   primary:
@@ -7,22 +36,26 @@ colors:
   # Normal colors
   normal:
     black:   '0x223355'
-    red:     '0x955eae'
-    green:   '0x4d9b4b'
+    red:     '0xb53f78'
+    green:   '0x308a2e'
     yellow:  '0xa5a450'
     blue:    '0x3a5a9e'
-    magenta: '0x7e638b'
-    cyan:    '0x245967'
-    white:   '0x8ca5a7'
+    magenta: '0x835698'
+    cyan:    '0x318196'
+    white:   '0x7399c8'
 
   # Bright colors
   bright:
     black:   '0x71d763'
     red:     '0xb69b59'
-    green:   '0x89d0cb'
+    green:   '0x218367'
     yellow:  '0x5aa3e7'
-    blue:    '0x57b1ac'
+    blue:    '0x204289'
     magenta: '0xceb683'
     cyan:    '0x6fc4be'
-    white:   '0x395373'
+    white:   '0x090c0f'
 
+  indexed_colors: []
+
+# This might conflict with compton, better to set to 1.0
+background_opacity: 1.0
