@@ -2,6 +2,11 @@
 It's named `.vimrc` but if you are using neovim the config file is actually `init.vim`.
 So copy it to `~/.config/nvim/init.vim`
 
+# Plugins
+
+I use [vim-plug](https://github.com/junegunn/vim-plug) to manage the plugins. Run `:PlugInstall` to install the plugins included
+in the config
+
 # Extra stuffs
 
 ## FZF
