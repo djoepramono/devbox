@@ -43,6 +43,12 @@ To run the lemonbar you can include this in bspwmrc
 
 Except that sometimes it doesn't run on startup. It will run if you call manually from the command line. Currently it's not known why
 
+# Shortcuts
+
+Keyboard shortcuts are handled by separate command `sxhkd`. Copy the `sxhkdrc` to `~/.config/sxhkd/`
+
+For reference on all of the keysym (keyboard keys) that can be used as a shortcut, you can refer [here](http://wiki.linuxquestions.org/wiki/List_of_keysyms)
+
 # Reference
 
 [Changelog](https://madnight.github.io/bspwm/CHANGELOG/) a bit outdated though
