@@ -4,6 +4,8 @@
 
 export GIT_EDITOR=nvim
 
+export PATH=$PATH:~/Scripts
+
 # need this
 #function scm_prompt_info()
 #{
