@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Hint
+# color scheme starts with \e[ or \033[ 
+# color scheme is ; delimited and it's in this format background;font-decoration;text-color. If you want default just put nothing
+# color scheme ends with m
+# to reset a color scheme you can put nothing between \033[ and m
+# to reset_color or any color scheme that has length 0, you need to enclose everything with [ and ] 
+#   otherwise bash sometimes cannot get the length of the prompt right and 
+#   as a result pressing up arrow to brose the history might leak previous command
+# remember you need to escape \ and the enclosing []
+bold_cyan="\[\\033[;01;36m\]"
+yellow="\[\\033[;00;31m\]"
+blue="\[\\033[;00;34m\]"
+white="\[\\033[;00;37m\]"
+reset_color="\[\\033[m\]"
+PS1="\n${white}$(echo $CUSTOM_PROMPT): ${reset_color} ${bold_cyan}\w ${yellow}$(__git_ps1) \n${reset_color}→ "

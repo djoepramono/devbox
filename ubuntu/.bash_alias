@@ -4,10 +4,10 @@
 alias atom="atom --enable-gpu-rasterization"
 
 # clean up docker files
-alias dnuke='docker kill $(docker ps -q);docker rm $(docker ps -a -q);docker rmi -f $(docker images -q -f dangling=true);docker rmi -f $(docker images -q);docker volume rm -f $(docker volume ls -q)'
+alias docker-nuke='docker kill $(docker ps -q);docker rm $(docker ps -a -q);docker rmi -f $(docker images -q -f dangling=true);docker rmi -f $(docker images -q);docker volume rm -f $(docker volume ls -q)'
 
 # update ubuntu
-alias update-ubuntu='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean'
+alias ubuntu-update='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean'
 
 # lockscreen
 alias lockscreen="gnome-screensaver-command -a"   
