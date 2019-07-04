@@ -7,6 +7,9 @@ super + Return
   alacritty
 
 # program launcher
+# the default settings only launch the launcher on key release
+# super + @space
+# this has consequences where sometimes the launcher doesn't get launched at all
 super + space
 	dmenu_run
 
@@ -131,3 +134,10 @@ alt + m ; {1-3} ; {1-9,0}
 # lockscreen with scrolllock
 super + shift + slash
   lockscreen-blur
+
+# custom move
+super + bracket{left,right}
+  desk=`bspc query -D -d focused`; \
+  bspc desktop -m {prev,next}; \
+  bspc monitor -f {prev,next}; \
+  bspc desktop -f $desk
