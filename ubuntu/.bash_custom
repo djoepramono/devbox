@@ -30,6 +30,9 @@ fi
 # sbt needs this
 export TERM=xterm-color
 
+# Pywal, colorscheme on the go
+cat ~/.cache/wal/sequences
+
 # bash-my-aws
 BASH_MY_AWS_FOLDER="$HOME/Programs/bash-my-aws"
 for f in ${BASH_MY_AWS_FOLDER}/lib/*-functions; do source $f; done
