@@ -53,3 +53,9 @@ ${HOME}/.config/bspwm/lemonbar/panel
 
 # To debug, spawn a terminal of you choice 
 #   alacritty
+
+# JAVA apps
+# Somehow java apps like intellij doesn't really play nicely with bspwm
+# unless you run the following command before hand
+# LG3D is one of the window manager that is supported by JAVA apps ...
+wmname LG3D

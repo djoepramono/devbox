@@ -20,3 +20,8 @@ vte-terminal {
 ## Shortcuts
 
 `ctrl``shift``space` go into vi mode, including search
+
+## Downsides
+
+- It depends on vte-ng and it is very hard to be installed on Ubuntu
+- It is not very active anymore
