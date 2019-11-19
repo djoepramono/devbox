@@ -2,6 +2,10 @@
 
 A popular bar for window manager, though it dependency on Siji font is a annoying as it doesn't play nice with certain distribution e.g. ubuntu
 
+## Config
+
+If you follow the installation instruction, an example would be provided in `~/.config/polybar/config`. Alternatively just copy the file from this repo
+
 ## Dependencies
 
 The following might needs to be installed first
@@ -42,3 +46,11 @@ At least for me ... I have tried `sudo apt install fonts-font-awesome` and reloa
 
 ### Do not change the default font configuration
 I managed to get the `ttf` version working so there's no need to change anything on `/etc/fonts/conf.avail`. Eventhough there are some instruction to remove `70-no-bitmaps.conf`
+
+### Do not worry about changing xinitrc
+If you are using ubuntu, this is not needed as it's probably already loaded somewhere. Otherwise you can create `~/.xinitrc` file and put the following lines
+
+```
+xset +fp /home/joe/.fonts
+xset fp rehash
+```
