@@ -44,6 +44,7 @@ In tmux mode you can also type `:list-keys` to list the keys available
 
 ## VI Mode
 
+### Selecting text
 By default it runs on emacs mode, but you can set it to run vi mode by
 adding the following config to the `.tmux.conf`
 
@@ -53,3 +54,8 @@ bind-key -T copy-mode-vi 'v' send -X begin-selection
 bind-key -T copy-mode-vi 'y' send -X copy-selection-and-cancel
 ```
 
+### Color scheme
+Sometimes the color scheme might break and this might result in vi not having any syntax highlighting or simply defaults to the original color
+
+This can be mitigated by forcing tmux to run on 256 color via `tmux -2`, which is roughly translated as `TERM=xterm-256color tmux`
+Alternatively *outside* tmux, your $TERM needs to be set to mode that supports 256 color e.g. `xterm-256color` and not `xterm-color`. This may vary from OS to OS
