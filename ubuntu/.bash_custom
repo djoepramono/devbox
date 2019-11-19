@@ -2,17 +2,10 @@
 
 # Source this file either in .bashrc or .bash_profile (based on your terminal)
 
+# Set environment variables
+export TERM=xterm-color
 export GIT_EDITOR=nvim
-
-export PATH=$PATH:~/Scripts
-
-# need this
-#function scm_prompt_info()
-#{
-#  scm;
-#  scm_prompt_char;
-#  scm_prompt_info_common;
-#}
+export PATH=${HOME}/.local/bin/:~/Scripts/:$PATH
 
 # prompt
 #if [ -z ${AWS_ROLE+x} ]; then CUSTOM_PROMPT="$AWS_ROLE"; else CUSTOM_PROMPT="\u"; fi
@@ -21,23 +14,30 @@ export PATH=$PATH:~/Scripts
 [ -z $AWS_ROLE_ARN ] && CUSTOM_PROMPT="\u" || CUSTOM_PROMPT="$AWS_ROLE_ARN ($AWS_REGION)"
 
 # PS1="\n${cyan}$(echo $CUSTOM_PROMPT): ${reset_color} ${yellow}\w ${green}$(scm_prompt_info) \n${reset_color}→ "
-
-#PS1="${cyan}[\u@\h$([[ -n $AWS_ROLE ]] && echo  $AWS_ROLE) \W$(__git_ps1  (%s))]\$ "
+PS1="\n${cyan}$(echo $CUSTOM_PROMPT): ${reset_color} ${yellow}\w ${green}$(__git_ps1) \n${reset_color}→ "
 if [ -f ${HOME}/.bash.d/git-prompt.sh ]; then
   source ${HOME}/.bash.d/git-prompt.sh
 fi
 
-# sbt needs this
-export TERM=xterm-color
-
-# Pywal, colorscheme on the go
-cat ~/.cache/wal/sequences
+#PS1="${cyan}[\u@\h$([[ -n $AWS_ROLE ]] && echo  $AWS_ROLE) \W$(__git_ps1  (%s))]\$ "
 
 # bash-my-aws
 BASH_MY_AWS_FOLDER="$HOME/Programs/bash-my-aws"
 for f in ${BASH_MY_AWS_FOLDER}/lib/*-functions; do source $f; done
+source ${BASH_MY_AWS_FOLDER}/bash_completion.sh
 
-source $BASH_MY_AWS_FOLDER/bash_completion.sh
+# Set aliases
+alias dnuke='docker kill $(docker ps -q);docker rm $(docker ps -a -q);docker rmi -f $(docker images -q -f dangling=true);docker rmi -f $(docker images -q);docker volume rm -f $(docker volume ls -q)'
+alias update-ubuntu='sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean'
+alias lockscreen="gnome-screensaver-command -a"   
+
+# enable siji font for polybar
+# xset +fp /home/joe/.local/share/fonts
+# xset fp rehash
+
+# Pywal, colorscheme on the go
+cat ~/.cache/wal/sequences
+
 
 # custom function
 function git-web ()
