@@ -31,8 +31,9 @@ bspc config pointer_action2 resize_corner
 # make it possible to use direction to focus on floating window
 bspc config directional_focus_tightness low
 
-# Background
-feh --bg-scale ~/Pictures/a-light-in-the-evening-by-bastien-grivet-2560×1440.jpg
+# Pywal, set background and colorscheme
+# feh --bg-scale ~/Pictures/painterly-sekiro-2560x1440.jpg # alternative setup via feh
+wal -i ~/Pictures/painterly-sekiro-2560x1440.jpg 
 
 # Compositor - window effect
 pkill compton; compton --config ~/.config/compton/compton.conf &
