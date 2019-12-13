@@ -144,7 +144,7 @@ super + shift + bracket{left,right}
 
 # rearrange usb-c monitor desktops
 super + shift + r
-  bspc monitor DP-1 -o I II III IV V VI VII VIII IX X
+  bspc monitor DP-1 -o ii iii iv v vi vii viii ix
 
 # focus on specific desktop via dmenu
 super + slash 
@@ -153,3 +153,22 @@ super + slash
 # focus on specific desktop via a node exposed by rofi
 super + shift + slash
   rofi -show window
+
+# move the middle desktops to another
+# because the head and tail are usually staying with original monitor with dual screen setup
+# and then update focus 
+# and rearrange (something is still not 100 percent correct with this)
+super + shift + {comma,period}
+  desk=`bspc query -D -d focused`; \
+  bspc desktop ii -m {prev,next}; \
+  bspc desktop iii -m {prev,next}; \
+  bspc desktop iv -m {prev,next}; \
+  bspc desktop v -m {prev,next}; \
+  bspc desktop vi -m {prev,next}; \
+  bspc desktop vii -m {prev,next}; \
+  bspc desktop viii -m {prev,next}; \
+  bspc desktop ix -m {prev,next}; \ 
+  bspc monitor -f {prev,next}; \
+  bspc desktop -f $desk; \
+  bspc monitor DP-1 -o ii iii iv v vi vii viii ix x; \
+  bspc monitor eDP-1 -o i ii iii iv v vi vii viii ix;
