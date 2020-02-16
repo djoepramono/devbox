@@ -1,9 +1,15 @@
 #! /bin/sh
 
+wmname LG3D
+
 pkill sxhkd; sxhkd &
 
-bspc monitor DP-1 -d I II III IV V VI VII VIII IX X
-bspc monitor eDP-1 -d Laptop
+# Dual screen setup
+# Laptop screen is on the left, while the monitor screen is on the right
+# Movable desktops are labelled i to x
+# Head and tail are meant to stay at their respective desktop
+bspc monitor DP-1 -d ii iii iv v vi vii viii ix x
+bspc monitor eDP-1 -d i 
 
 bspc config border_width        4
 bspc config window_gap          12
@@ -31,9 +37,9 @@ bspc config pointer_action2 resize_corner
 # make it possible to use direction to focus on floating window
 bspc config directional_focus_tightness low
 
-# Pywal, set background and colorscheme
-# feh --bg-scale ~/Pictures/painterly-sekiro-2560x1440.jpg # alternative setup via feh
-wal -i ~/Pictures/painterly-sekiro-2560x1440.jpg 
+# Background
+feh --bg-scale ~/Pictures/keyboard.jpg
+#feh --bg-scale ~/Pictures/eruption-lava-volcano-oriental-cherry-tree-1920x1080.jpg
 
 # Compositor - window effect
 pkill compton; compton --config ~/.config/compton/compton.conf &
@@ -48,15 +54,9 @@ pkill conky; conky &
 # This has been inconsistent, sometimes it simply doesn't work
 # To debug use the exec variant
 #   exec ${HOME}/.config/bspwm/lemonbar/lemonbar-wrapper.sh >> /tmp/lemonbar.out
-${HOME}/.config/bspwm/lemonbar/panel
+# ${HOME}/.config/bspwm/lemonbar/panel
 # Alternatively use polybar instead
-#   $HOME/.config/polybar/launch.sh
+$HOME/.config/polybar/launch.sh
 
 # To debug, spawn a terminal of you choice 
 #   alacritty
-
-# JAVA apps
-# Somehow java apps like intellij doesn't really play nicely with bspwm
-# unless you run the following command before hand
-# LG3D is one of the window manager that is supported by JAVA apps ...
-wmname LG3D

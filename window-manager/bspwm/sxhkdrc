@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-  alacritty
+  termite
 
 # program launcher
 # the default settings only launch the launcher on key release
@@ -145,7 +145,7 @@ super + shift + bracket{left,right}
 # rearrange usb-c monitor desktops
 super + shift + r
   bspc monitor DP-1 -o ii iii iv v vi vii viii ix
-
+  
 # focus on specific desktop via dmenu
 super + slash 
   bspc desktop -f `bspc query -D --names | dmenu -b -i`
@@ -156,8 +156,7 @@ super + shift + slash
 
 # move the middle desktops to another
 # because the head and tail are usually staying with original monitor with dual screen setup
-# and then update focus 
-# and rearrange (something is still not 100 percent correct with this)
+# and then refocus and rearrange
 super + shift + {comma,period}
   desk=`bspc query -D -d focused`; \
   bspc desktop ii -m {prev,next}; \
