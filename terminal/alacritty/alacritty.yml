@@ -1,0 +1,16 @@
+window:
+  padding:
+    x: 15 
+    y: 15
+font:
+  normal:
+    family: Noto Sans Mono 
+  bold:
+    family: Noto Sans Mono
+  italic:
+    family: Noto Sans Mono
+  size: 8 
+  offset:
+    x: 0 
+    y: 1
+background_opacity: 0.95

@@ -13,6 +13,14 @@ I configured this WM to work with
 
 So it's better to have them installed
 
+# Installation
+
+In Ubuntu 19.04, there's a quite up to date package. This will install `sxhkd`, `xdo`, and `bspwm` itself
+
+```
+sudo apt install bspwm
+```
+
 # Splitting window
 
 By default, it's using Fibonacci splitting, which basically splits the current node vertically/horizontally in automatic fashion. 

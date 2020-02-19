@@ -6,7 +6,7 @@ sudo apt install git gcc make xcb \
   libxcb-util1-dev libxcb-ewmh-dev libxcb-randr0-dev \
   libxcb-icccm4-dev libxcb-keysyms1-dev libxcb-xinerama0-dev \
   libasound2-dev libxcb-xtest0-dev \
-  libxcb-shape0-dev \ # from this line I add things
+  libxcb-shape0-dev \ 
   libxft-dev \
   libx11-xcb-dev
 
