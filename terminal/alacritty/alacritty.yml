@@ -16,7 +16,6 @@ font:
 shell:
   program: /bin/bash
   args:
-    - -l
-    - -c
-    - "tmux -2"
+    - -ci # /bin/bash parameter -c is needed and -i is to start interactive instead of login shell
+    - "tmux"
 background_opacity: 0.95
