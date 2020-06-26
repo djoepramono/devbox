@@ -19,3 +19,6 @@ shell:
     - -ci # /bin/bash parameter -c is needed and -i is to start interactive instead of login shell
     - "tmux"
 background_opacity: 0.95
+key_bindings: # use `xxd -psd` in terminal to determine the hex code for key presses. Each key press usually represented by 2 chars 
+  - { key: I, mods: Control, chars: "\x02\x5b\x0a" } # ctrl i to invoke tmux insert mode: ctrl + b + [
+  - { key: RBracket, mods: Control, chars: "\x0a" } # ctrl [ to invoke tmux back to normal mode: enter
