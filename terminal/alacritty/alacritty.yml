@@ -4,13 +4,19 @@ window:
     y: 15
 font:
   normal:
-    family: Noto Sans Mono 
+    family: Ubuntu Mono
   bold:
-    family: Noto Sans Mono
+    family: Ubuntu Mono
   italic:
-    family: Noto Sans Mono
-  size: 8 
+    family: Ubuntu Mono
+    size: 8
   offset:
-    x: 0 
+    x: -1
     y: 1
+shell:
+  program: /bin/bash
+  args:
+    - -l
+    - -c
+    - "tmux -2"
 background_opacity: 0.95
