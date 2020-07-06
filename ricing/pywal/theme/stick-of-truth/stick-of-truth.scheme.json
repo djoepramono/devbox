@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/djoe/Pictures/hex-abstract-material-design-ad-3840x2160.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#133a4b",
+        "foreground": "#9de4e0",
+        "cursor": "#9de4e0"
+    },
+    "colors": {
+        "color0": "#133a4b",
+        "color1": "#635886",
+        "color2": "#915A82",
+        "color3": "#F56982",
+        "color4": "#1CB1FB",
+        "color5": "#24B5F3",
+        "color6": "#3DCFD6",
+        "color7": "#9de4e0",
+        "color8": "#6d9f9c",
+        "color9": "#635886",
+        "color10": "#915A82",
+        "color11": "#F56982",
+        "color12": "#1CB1FB",
+        "color13": "#24B5F3",
+        "color14": "#3DCFD6",
+        "color15": "#9de4e0"
+    }
+}
