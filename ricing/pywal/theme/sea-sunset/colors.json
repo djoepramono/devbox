@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/djoe/Pictures/red-blood-sky-sea.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#1c252e",
+        "foreground": "#d0d8d5",
+        "cursor": "#d0d8d5"
+    },
+    "colors": {
+        "color0": "#1c252e",
+        "color1": "#708479",
+        "color2": "#E69D47",
+        "color3": "#197490",
+        "color4": "#507C87",
+        "color5": "#4C96B0",
+        "color6": "#63AED3",
+        "color7": "#d0d8d5",
+        "color8": "#919795",
+        "color9": "#708479",
+        "color10": "#E69D47",
+        "color11": "#197490",
+        "color12": "#507C87",
+        "color13": "#4C96B0",
+        "color14": "#63AED3",
+        "color15": "#d0d8d5"
+    }
+}

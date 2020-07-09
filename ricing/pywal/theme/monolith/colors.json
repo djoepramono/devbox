@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/djoe/Pictures/monolith.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#1c252e",
+        "foreground": "#a8dad9",
+        "cursor": "#a8dad9"
+    },
+    "colors": {
+        "color0": "#1c252e",
+        "color1": "#647688",
+        "color2": "#C17889",
+        "color3": "#168E8D",
+        "color4": "#308B8B",
+        "color5": "#4F9391",
+        "color6": "#659E9E",
+        "color7": "#a8dad9",
+        "color8": "#759897",
+        "color9": "#647688",
+        "color10": "#C17889",
+        "color11": "#168E8D",
+        "color12": "#308B8B",
+        "color13": "#4F9391",
+        "color14": "#659E9E",
+        "color15": "#a8dad9"
+    }
+}
