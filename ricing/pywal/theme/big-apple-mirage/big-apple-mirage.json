@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/djoe/Pictures/above-the-big-apple.png",
+    "alpha": "100",
+
+    "special": {
+        "background": "#24283a",
+        "foreground": "#afbccb",
+        "cursor": "#afbccb"
+    },
+    "colors": {
+        "color0": "#24283a",
+        "color1": "#b3de7b",
+        "color2": "#32618C",
+        "color3": "#a16e64",
+        "color4": "#e0bd77",
+        "color5": "#49a2b7",
+        "color6": "#586E8D",
+        "color7": "#afbccb",
+        "color8": "#7a838e",
+        "color9": "#2A435C",
+        "color10": "#49a2b7",
+        "color11": "#a16e64",
+        "color12": "#e0bd77",
+        "color13": "#32618C",
+        "color14": "#586E8D",
+        "color15": "#afbccb"
+    }
+}
