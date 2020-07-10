@@ -4,14 +4,14 @@
 
 # terminal emulator
 super + Return
-  termite
+  alacritty
 
 # program launcher
 # the default settings only launch the launcher on key release
 # super + @space
 # this has consequences where sometimes the launcher doesn't get launched at all
 super + space
-	dmenu_run
+  rofi -show run
 
 # make sxhkd reload its configuration files:
 super + Escape
