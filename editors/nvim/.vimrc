@@ -38,22 +38,24 @@ Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'ayu-theme/ayu-vim'
+Plug 'dylanaraps/wal.vim'
 
 " Initialize plugin system
 call plug#end()
 
 " Yet another custom
 " let $NVIM_TUI_ENABLE_TRUE_COLOR=1 " For old neovim
-if (has("termguicolors"))
- set termguicolors
-endif
-set termguicolors
+" if (has("termguicolors"))
+" set termguicolors
+" endif
+" set termguicolors
 set t_Co=256
 " colorscheme gruvbox
 " colorscheme jellybeans
 " colorscheme solarized8
-let ayucolor="mirage"
-colorscheme ayu
+" let ayucolor="mirage"
+" colorscheme ayu
+colorscheme wal
 
 set background=dark    " Setting dark mode
 
