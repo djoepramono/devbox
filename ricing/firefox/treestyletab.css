@@ -1,0 +1,33 @@
+:root {
+  --color0: #1c252e;
+  --color1: #647688;
+  --color2: #C17889;
+  --color3: #168e8d;
+  --color4: #308B8B;
+  --color5: #4F9391;
+  --color6: #659E9E;
+  --color7: #a8dad9;
+  background-color: var(--color3);
+}
+
+/* Show title of unread tabs with red and italic font */
+:root.sidebar tab-item.unread .label-content {
+  color: red !important;
+  font-style: italic !important;
+}
+
+.tab {
+  background-color: var(--color7)
+}
+
+.tab.active {
+  background-color: var(--color3);
+}
+
+.tab.active:hover {
+  background-color: var(--color2);
+}
+
+.tab:hover, .tab:not(.active):hover {
+  background-color: var(--color2);
+}

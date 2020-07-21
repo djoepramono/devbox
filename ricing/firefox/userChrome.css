@@ -1,0 +1,14 @@
+#nav-bar {
+  background-color: #a8dad9 !important;
+}
+
+.tab-background {
+  background-color: #a8dad9 !important;
+}
+
+.tab-background[selected="true"] {
+  background-color: #168e8d !important; /* this sets the color of the tab background */
+}
+.tab-line[selected="true"] {
+  background-color : #d17889; /* this sets the color of the line above the tab */
+}
