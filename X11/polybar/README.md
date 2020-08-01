@@ -10,6 +10,8 @@ If you follow the installation instruction, an example would be provided in `~/.
 
 As it stands now, Polybar team [doesn't really support Debian](https://github.com/polybar/polybar/issues/1959). The repo README seems to say that it supports Ubuntu but alas I don't think this is true. Luckily on the same link you can find a few other people has took it upon themselves to create package Polybar for us, Ubuntu/Debian user. So what we need to do is just download the `.deb` file and install it. 
 
+Alternatively you can find the package on [Launchpad](https://launchpad.net/ubuntu/+builds?build_text=polybar&build_state=all)
+
 ```
 sudo dpkg -i <polybar.deb>
 ```
