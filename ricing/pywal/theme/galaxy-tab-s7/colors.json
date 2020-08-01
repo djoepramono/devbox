@@ -1,0 +1,28 @@
+{
+    "wallpaper": "/home/djoe/Pictures/galaxy-tab-s7.jpg",
+    "alpha": "100",
+
+    "special": {
+        "background": "#e6ebed",
+        "foreground": "#08202D",
+        "cursor": "#08202D"
+    },
+    "colors": {
+        "color0": "#e6ebed",
+        "color1": "#EE8B34",
+        "color2": "#0D6E91",
+        "color3": "#477B84",
+        "color4": "#0A95B1",
+        "color5": "#25AFC4",
+        "color6": "#B5D4CF",
+        "color7": "#08202D",
+        "color8": "#758886",
+        "color9": "#EE8B34",
+        "color10": "#0D6E91",
+        "color11": "#477B84",
+        "color12": "#0A95B1",
+        "color13": "#25AFC4",
+        "color14": "#B5D4CF",
+        "color15": "#08202D"
+    }
+}
