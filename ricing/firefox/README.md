@@ -22,3 +22,8 @@ If you install this Firefox Add Ons, you can rice it further with the supplied t
 - Go to `about:addons`
 - Go to Tree Style Tabs menu
 - Under preferences, there's a section where you can copy paste CSS rules
+
+# Full Screen URL auto hiding
+
+By default going full screen via bswpm will make Firefox go full screen mode as well and hide the url bar.
+This can be disabled with `about:config` -> `browser.fullscreen.autohide` = false
