@@ -1,14 +1,45 @@
+:root {
+  --colorA: #ecff6b;
+  --colorB: #6affda;
+  --colorC: #b4b4b4;
+  --colorD: #5ceaff;
+  --colorE: #514350;
+  --colorF: #281f1a;
+  --colorG: green;
+  --tab-height: 19px;
+  --font-size: 11px;
+  background-color: var(--colorF);
+}
+
+/****************************************/
+/* Prevent Firefox to execute back button during right click */
+#contentAreaContextMenu{ margin: 2px 0 0 2px }
+
+/****************************************/
+
+/* Simple color scheme */
 #nav-bar {
   background-color: #a8dad9 !important;
 }
-
 .tab-background {
   background-color: #a8dad9 !important;
 }
-
 .tab-background[selected="true"] {
   background-color: #168e8d !important; /* this sets the color of the tab background */
 }
 .tab-line[selected="true"] {
   background-color : #d17889; /* this sets the color of the line above the tab */
+}
+
+/***************************************/
+/* Tree Style Tab */
+/* Note that the actual styling for the Tree Style Tabs are done via its extension advanced menu */
+
+/*Disable top tabs*/
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+    visibility: collapse !important;
 }
