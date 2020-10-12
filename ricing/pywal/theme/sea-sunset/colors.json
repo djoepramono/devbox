@@ -1,28 +1,28 @@
 {
-    "wallpaper": "/home/djoe/Pictures/red-blood-sky-sea.jpg",
+    "wallpaper": "/home/djoe/Pictures/inferno-delivery-of-souls-by-alejandro-burdisio-2560×1440.jpg",
     "alpha": "100",
 
     "special": {
         "background": "#1c252e",
-        "foreground": "#d0d8d5",
-        "cursor": "#d0d8d5"
+        "foreground": "#b2ccdd",
+        "cursor": "#b2ccdd"
     },
     "colors": {
         "color0": "#1c252e",
-        "color1": "#708479",
-        "color2": "#E69D47",
-        "color3": "#197490",
-        "color4": "#507C87",
-        "color5": "#4C96B0",
-        "color6": "#63AED3",
-        "color7": "#d0d8d5",
-        "color8": "#919795",
-        "color9": "#708479",
-        "color10": "#E69D47",
-        "color11": "#197490",
-        "color12": "#507C87",
-        "color13": "#4C96B0",
-        "color14": "#63AED3",
-        "color15": "#d0d8d5"
+        "color1": "#484C4F",
+        "color2": "#54656B",
+        "color3": "#A85929",
+        "color4": "#D2964F",
+        "color5": "#5E7A85",
+        "color6": "#6E909C",
+        "color7": "#b2ccdd",
+        "color8": "#7c8e9a",
+        "color9": "#484C4F",
+        "color10": "#54656B",
+        "color11": "#A85929",
+        "color12": "#D2964F",
+        "color13": "#5E7A85",
+        "color14": "#6E909C",
+        "color15": "#b2ccdd"
     }
 }
