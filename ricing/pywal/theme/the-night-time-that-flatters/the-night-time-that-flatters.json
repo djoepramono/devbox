@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/djoe/Pictures/wallpapers/the-night-time-that-flatters-ayuli2424-3440\u00d71440.jpg",
+    "alpha": "100",
+    "special": {
+        "background": "#060E0B",
+        "foreground": "#e0c6a3",
+        "cursor": "#e0c6a3"
+    },
+    "colors": {
+        "color0": "#060E0B",
+        "color1": "#47553F",
+        "color2": "#639377",
+        "color3": "#275A58",
+        "color4": "#225F62",
+        "color5": "#9D6D36",
+        "color6": "#184546",
+        "color7": "#e0c6a3",
+        "color8": "#9c8a72",
+        "color9": "#47553F",
+        "color10": "#639377",
+        "color11": "#275A58",
+        "color12": "#225F62",
+        "color13": "#9D6D36",
+        "color14": "#184546",
+        "color15": "#e0c6a3"
+    }
+}
