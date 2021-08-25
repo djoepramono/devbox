@@ -1,11 +1,13 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
-    "key": "ctrl+alt+right",
+    "key": "alt+shift+right",
+    "when": "editorTextFocus",
     "command": "workbench.action.navigateForward"
   },
   {
-    "key": "ctrl+alt+left",
+    "key": "alt+shift+left",
+    "when": "editorTextFocus",
     "command": "workbench.action.navigateBack"
   }
 ]
