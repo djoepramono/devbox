@@ -17,4 +17,4 @@ Create color scheme on the fly. It doesn't actually override your default termin
 
 `color1` is used for comments, so any color closer to the background is good
 `color2` is used for markdown heading and strings in VSCode Pywal
-
+`color3` is used to show modified files and symbols in VSCode Pywal
