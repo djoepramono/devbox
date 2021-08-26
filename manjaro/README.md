@@ -22,6 +22,19 @@ paru -S neovim
 paru -S vscode
 ```
 
+## FZF
+
+```
+yay -S fzf
+```
+
+and then add the following your `~/.zshrc`
+
+```
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+```
+
 ## Docker
 
 ```
