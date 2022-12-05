@@ -1,0 +1,24 @@
+wallpaper: "/home/djoe/Pictures/wallpapers/ship-at-dawn-3440×1440.jpg"
+
+special:
+    background: "#0a2330"
+    foreground: "#e8dad0"
+    cursor: "#e8dad0"
+
+colors:
+    color0: "#0a2330"
+    color1: "#54788D"
+    color2: "#817F81"
+    color3: "#6E92A4"
+    color4: "#7BB0C1"
+    color5: "#9EA3A6"
+    color6: "#DDAE9B"
+    color7: "#e8dad0"
+    color8: "#a29891"
+    color9: "#54788D"
+    color10: "#817F81"
+    color11: "#6E92A4"
+    color12: "#7BB0C1"
+    color13: "#9EA3A6"
+    color14: "#DDAE9B"
+    color15: "#e8dad0"
