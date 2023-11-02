@@ -1,0 +1,8 @@
+# This file contains script that relies on things to be installed first
+
+# Pywal
+cat $HOME/.cache/wal/sequences
+
+# Ruby
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

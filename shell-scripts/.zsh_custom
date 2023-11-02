@@ -11,8 +11,16 @@ precmd() { vcs_info }
 RESET_COLOR='\[\033[m\]'
 NEWLINE=$'\n'
 
-PROMPT="${NEWLINE}%F{cyan}%n:%f %f %F{yellow}%~%f %b ${vcs_info_msg_0_} ${NEWLINE}%f→"
+# you need single quote to wrap the whole prompt
+# double quotes are no longer working
+PROMPT='${NEWLINE}%F{cyan}%n:%f %f %F{yellow}%~%f %b ${vcs_info_msg_0_} ${NEWLINE}%f→'
 
 # FZF
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+# Custom functions
+set-git-config-djoe () {
+    git config user.name "Djoe Pramono"
+    git config user.email "djoepramono@gmail.com"
+}
