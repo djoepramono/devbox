@@ -4,7 +4,7 @@
 
 window:
   padding:
-    x: 15 
+    x: 15
     y: 15
 
 tabspaces: 2
@@ -12,27 +12,11 @@ tabspaces: 2
 # Require restart
 font:
   normal:
-    family: Inconsolata # e.g.Noto Sans Mono or UbuntuMono
-    style: Regular
+    family: Liberation Mono # e.g.Noto Sans Mono or UbuntuMono
   bold:
-    family: Inconsolata
+    family: Liberation Mono
   italic:
-    family: UbuntuMono
+    family: Liberation mono
   size: 10.0
-  offset: # set this to make font higher or wider. It can go negative
-    x: -1
-    y: 0
 
 draw_bold_text_with_bright_colors: false
-
-shell:
-  program: /bin/bash
-  args:
-    - -ci # /bin/bash parameter -c is needed and -i is to start interactive instead of login shell
-    - "tmux -2" # depending on your computer ... sometimes `tmux` here is not enough, you need to run `tmux -2` to force terminal color
-
-key_bindings: # use `xxd -psd` in terminal to determine the hex code for key presses. Each key press usually represented by 2 chars 
-  - { key: I, mods: Control, chars: "\x02\x5b\x0a" } # ctrl i to invoke tmux insert mode: ctrl + b + [
-  - { key: RBracket, mods: Control, chars: "\x0a" } # ctrl [ to invoke tmux back to normal mode: enter
-
-background_opacity: 1.0 # This might conflict with compton, better to set to 1.0

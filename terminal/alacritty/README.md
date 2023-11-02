@@ -1,12 +1,10 @@
 # Alacritty
 
-Written in Rust
+Fast terminal written in Rust and uses GPU to render
 
-## Upsides
-- Fast and it uses GPU for rendering
+Config path `~/.config/alacritty/alacritty.yml` (_may not be available by default_)
 
-## Downsides
-- no scrollback buffer search, means you can search the screen
+### Buffer Search
 
-## TMUX
-To negate the downsides, we are using TMUX which is a terminal multiplexer which basically doing tabbing, splitting, scrolling in 1 terminal instance. `alacritty.yml` in this folder contains several keybindings and start TMUX by default in an interactive shell.
+In the past we need `TMUX` to search the buffer, but nowadays we can use `ctrl+shift+f` and `enter` and `shift+enter` to navigate the results
+
