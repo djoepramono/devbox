@@ -1,0 +1,35 @@
+# Change local git folder to have user name and email
+set-git-config-djoe () {
+    git config user.name "Djoe Pramono"
+    git config user.email "djoepramono@gmail.com"
+}
+
+
+# Open a git branch in a browser
+function git-web ()
+{
+  if [ -z $1 ]; then
+    echo "Remote name needed! Usage: git-web [origin]"
+    return -1
+  fi
+
+  if [ -z $(git remote get-url $1) ]; then
+    echo "Cannot find remote $1, available remotes are:"
+    git remote -v
+
+    return -1
+  fi
+
+  xdg-open "https://$( git remote get-url $1 | awk -F '@' '{print $2}' | sed -e s/:/\\// | sed '/^\s*$/d' | awk -F '.git' '{print $1}')"
+}
+
+function aws-console {
+  if [ -z ${AWS_ROLE} ]; then
+    echo "No AWS_ROLE found. Are you authenticated?"
+    return
+  fi
+
+  USER_DATA_DIR=/tmp/chrome-profile-$AWS_ROLE
+  mkdir -p "${USER_DATA_DIR}"
+  xdg-open $(aws-console-url)
+}

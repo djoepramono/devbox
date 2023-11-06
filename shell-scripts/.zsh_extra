@@ -6,3 +6,12 @@ cat $HOME/.cache/wal/sequences
 # Ruby
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Bash My AWS
+export PATH="$PATH:${BMA_HOME:-$HOME/.bash-my-aws}/bin"
+source ${BMA_HOME:-$HOME/.bash-my-aws}/aliases
+
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+
+source ${BMA_HOME:-$HOME/.bash-my-aws}/bash_completion.sh

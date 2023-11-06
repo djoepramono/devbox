@@ -3,7 +3,10 @@ setopt PROMPT_SUBST
 # GIT related prompt
 autoload -Uz vcs_info
 zstyle ':vcs_info:git*' formats "(%b) %a %m%u%c "
-precmd() { vcs_info }
+#precmd() { vcs_info }
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
 
 #RED='\[\033[1;31m\]'
 #YELLOW='\[\033[1;33m\]'
@@ -19,8 +22,3 @@ PROMPT='${NEWLINE}%F{cyan}%n:%f %f %F{yellow}%~%f %b ${vcs_info_msg_0_} ${NEWLIN
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
-# Custom functions
-set-git-config-djoe () {
-    git config user.name "Djoe Pramono"
-    git config user.email "djoepramono@gmail.com"
-}
