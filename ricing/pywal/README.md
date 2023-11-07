@@ -2,11 +2,16 @@
 
 Create color scheme on the fly. It doesn't actually override your default terminal setup
 
+# Quick Setup
+
+```
+yay pywal-git
+
+wal -i ~/Pictures/Wallpapers/paramount.webp -b '#1e2830'
+```
+
 # Notes 
-- You might already have python3 but make sure to install pip3
-- `pip3 install pywal` install pywal in `~/.local/bin` which may not be in your path. So make sure you include it
 - To trigger pywal during startup, adding the following line to the `~/.bashrc` is enough `cat ~/.cache/wal/sequences`
-- Some apps actually reads from `~/.Xresources` and Pywal actually created this file albeit in different name. Make sure you copy it across. By default Ubuntu doesn't supply `~/.Xresources` 
 
 # Themes
 - You can load any existing theme by typing `pywal --theme <file_location>`

@@ -1,7 +1,7 @@
 # Hello
 
 This repository contains necessary stuffs to buid my personal development box.
-My current box is Ubuntu and I use bash. So most of the scripts here are implicity geared to those.
+My current box is Manjaro with zsh. I used to run Ubuntu, and thus the scripts in this repo might be geared towards Manjaro / Ubuntu.
 
 This repository contains but not limited to
 - ricing dotfiles
